@@ -1,0 +1,112 @@
+        /* raleway-500 - latin */
+        @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            src: local(''),
+                url('./static/raleway-v22-latin-500.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('./static/raleway-v22-latin-500.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        /* raleway-600 - latin */
+        @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 600;
+            src: local(''),
+                url('./static/raleway-v22-latin-600.woff2') format('woff2'),
+                /* Chrome 26+, Opera 23+, Firefox 39+ */
+                url('./static/raleway-v22-latin-600.woff') format('woff');
+            /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        }
+
+        a {
+            transition: all 0.1s ease-in-out;
+            position: relative;
+            color: #aaaaaa;
+            font-weight: 500;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        a:before,
+        a:after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            width: 0px;
+            height: 3px;
+            margin: 3px 0 0;
+            transition: all 0.1s ease-in-out;
+            transition-duration: 0.5s;
+            opacity: 0;
+            background-color: #2bc752;
+            left: 0;
+        }
+
+        a:hover {
+            cursor: pointer;
+            color: #ffffff;
+            transition: all 0.1s ease-in-out;
+            transition-duration: 0.5s;
+        }
+
+        a:hover:before,
+        a:hover:after {
+            width: 100%;
+            opacity: 1;
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        h1 {
+            color: #eeeeee;
+            font-weight: 600;
+            margin: 0px;
+            font-size: 70px;
+        }
+
+        h2 {
+            color: #aaaaaa;
+            font-weight: 500;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        html {
+            background-color: #111111;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .bottom {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 20px;
+            line-height: 30px;
+        }
+
+        @media (prefers-color-scheme: light) {
+            a {
+                color: #757575;
+            }
+
+            a:hover {
+                color: #000000;
+            }
+
+            h1 {
+                color: #000000;
+            }
+
+            h2 {
+                color: #111111;
+            }
+
+            html {
+                background-color: #eeeeee;
+            }
+        }
