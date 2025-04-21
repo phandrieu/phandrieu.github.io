@@ -3,6 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Balises SEO -->
+    <meta name="description" content="Paul-Henri Andrieu - Étudiant Ingénieur Centralien et Chercheur à Marseille et à l'École Polytechnique Fédérale de Lausanne. Découvrez mon profil professionnel et contactez-moi.">
+    <meta name="keywords" content="Paul-Henri Andrieu, Ingénieur Centralien, Chercheur, Marseille, EPFL, CV, profil professionnel">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://andrieu.ch/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Paul-Henri Andrieu">
+    <meta property="og:description" content="Paul-Henri Andrieu - Étudiant Ingénieur Centralien et Chercheur. Découvrez mon profil professionnel.">
+    <meta property="og:image" content="https://andrieu.ch/profile.jpeg">
+    <meta property="og:url" content="https://andrieu.ch/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Paul-Henri Andrieu">
+    <meta name="twitter:description" content="Paul-Henri Andrieu - Étudiant Ingénieur Centralien et Chercheur. Découvrez mon profil professionnel.">
+    <meta name="twitter:image" content="https://www.example.com/profile.jpeg">
+    
     <link rel="icon" type="image/png" href="Logo.png">
     <title>Paul-Henri Andrieu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -71,6 +91,23 @@
         .links i {
             margin-right: 5px;
         }
+        /* Bouton moderne */
+        .btn {
+            display: inline-block;
+            background-color: #0073b1;
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #005a87;
+        }
         /* Media Query pour petits écrans */
         @media (max-width: 480px) {
             .card {
@@ -94,7 +131,7 @@
 </head>
 <body>
     <div class="card">
-        <img src="./profile.jpeg" alt="Photo de profil" class="avatar">
+        <img src="./profile.jpeg" alt="Portrait de Paul-Henri Andrieu" class="avatar">
         <div class="name">Paul-Henri Andrieu</div>
         <div class="description">
             <div class="job">
@@ -120,6 +157,7 @@
                 <i class="fab fa-linkedin"></i> /phandrieu
             </a>
         </div>
+        <a href="cv.html" class="btn">Formations & Réalisations</a>
     </div>
     <script>
         // Calcule la vraie hauteur de la fenêtre sur mobile
