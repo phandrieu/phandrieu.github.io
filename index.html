@@ -1,35 +1,133 @@
 <!DOCTYPE html>
-<html>
-    <header>
-        <title>Paul-Henri Andrieu</title>
-        <link href="style.css" rel="stylesheet">
-        <link rel="icon" href="favicon.ico" />
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="Paul-Henri Andrieu">
-        <meta property="og:title" content="Paul-Henri Andrieu">
-        <meta property="og:type" content="website">
-        <meta property="og:image" content="./content/overview.png">
-        <meta property="og:description" content="Site de présentation de Paul-Henri Andrieu">
-        <meta property="og:url" content="phandrieu.fr">
-    </header>
-    <body>
-        <h1>Paul-Henri Andrieu</h1>
-        <h2>D&eacuteveloppeur passionn&eacute</h2> 
-        <div class="bottom">
-            <a href="./CV.pdf">CV</a>
-            <br>
-            <a href="mailto:paul-henri@phandrieu.fr">Mail</a>
-            <br>
-            <a href="./public.pgp" download>PGP</a>
-            <br>
-            <a href="https://twitter.com/paulhandrieu">Twitter</a>
-            <br>
-            <a href="https://github.com/phandrieu">GitHub</a>
-            <br>
-            <a href="https://instagram.com/paulh_andrieu">Instagram</a>
-            <br>
-            
-            
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paul-Henri Andrieu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        :root {
+            /* La variable --vh sera mise à jour par le script ci-dessous */
+            --vh: 100vh;
+        }
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 300;
+            background: radial-gradient(circle, #003366, #00e5ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Utilise la variable --vh pour une hauteur adaptée aux mobiles */
+            min-height: calc(var(--vh) * 1);
+            overflow: hidden;
+        }
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 300px;
+            margin: 1rem;
+        }
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .description {
+            margin-bottom: 1rem;
+        }
+        .job {
+            margin-bottom: 0.5rem;
+        }
+        .job-title {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .job-location {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #666;
+        }
+        .links a {
+            text-decoration: none;
+            color: #0073b1;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0 10px 0.5rem;
+        }
+        .links i {
+            margin-right: 5px;
+        }
+        /* Media Query pour petits écrans */
+        @media (max-width: 480px) {
+            .card {
+                padding: 1rem;
+            }
+            .name {
+                font-size: 1.3rem;
+            }
+            .job-title {
+                font-size: 0.9rem;
+            }
+            .job-location {
+                font-size: 0.75rem;
+            }
+            .links a {
+                font-size: 0.8rem;
+                margin: 0 5px 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="./profile.jpeg" alt="Photo de profil" class="avatar">
+        <div class="name">Paul-Henri Andrieu</div>
+        <div class="description">
+            <div class="job">
+                <div class="job-title">Étudiant Ingénieur Centralien</div>
+                <div class="job-location">Marseille</div>
+            </div>
+            <div class="job">
+                <div class="job-title">Étudiant Chercheur</div>
+                <div class="job-location">École Polytechnique Fédérale de Lausanne</div>
+            </div>
         </div>
-    </body>
+        <div class="links">
+            <a href="tel:+33643822294">
+                <i class="fa fa-phone"></i> +33 6 43 82 22 94
+            </a><br>
+            <a href="mailto:paul-henri@andrieu.ch">
+                <i class="fa fa-envelope"></i> paul-henri@andrieu.ch
+            </a><br>
+            <a href="https://github.com/phandrieu" target="_blank">
+                <i class="fab fa-github"></i> /phandrieu
+            </a><br>
+            <a href="https://www.linkedin.com/in/phandrieu/" target="_blank">
+                <i class="fab fa-linkedin"></i> /phandrieu
+            </a>
+        </div>
+    </div>
+    <script>
+        // Calcule la vraie hauteur de la fenêtre sur mobile
+        function setVh() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh * 100}px`);
+        }
+        setVh();
+        window.addEventListener('resize', setVh);
+    </script>
+</body>
 </html>
