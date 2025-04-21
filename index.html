@@ -25,6 +25,7 @@
     <link rel="icon" type="image/png" href="Logo.png">
     <title>Paul-Henri Andrieu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    
     <style>
         :root {
             /* La variable --vh sera mise à jour par le script ci-dessous */
@@ -52,6 +53,9 @@
             width: 90%;
             max-width: 300px;
             margin: 1rem;
+            /* Card scrollable */
+            max-height: 90vh;
+            overflow-y: auto;
         }
         .avatar {
             width: 150px;
@@ -100,12 +104,18 @@
             text-decoration: none;
             font-size: 0.9rem;
             font-weight: bold;
-            margin-top: 1rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             transition: background-color 0.3s ease;
         }
         .btn:hover {
             background-color: #005a87;
+        }
+        /* Conteneur pour les deux boutons sur la même ligne */
+        .download-buttons {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
         }
         /* Media Query pour petits écrans */
         @media (max-width: 480px) {
@@ -125,6 +135,10 @@
                 font-size: 0.8rem;
                 margin: 0 5px 0.5rem;
             }
+            /* Les boutons restent alignés sur une seule ligne */
+            .download-buttons {
+                flex-wrap: nowrap;
+            }
         }
     </style>
 </head>
@@ -135,11 +149,19 @@
         <div class="description">
             <div class="job">
                 <div class="job-title">Étudiant Ingénieur Centralien</div>
-                <div class="job-location">Marseille</div>
+                <div class="job-location">
+                    <a href="https://phandrieu.perso.centrale-med.fr/" target="_blank" style="color: inherit; text-decoration: none;">
+                        École Centrale de Marseille
+                    </a>
+                </div>
             </div>
             <div class="job">
                 <div class="job-title">Étudiant Chercheur</div>
-                <div class="job-location">École Polytechnique Fédérale de Lausanne</div>
+                <div class="job-location">
+                    <a href="https://people.epfl.ch/paul-henri.andrieu/" target="_blank" style="color: inherit; text-decoration: none;">
+                        École Polytechnique Fédérale de Lausanne
+                    </a>
+                </div>
             </div>
         </div>
         <div class="links">
@@ -156,7 +178,10 @@
                 <i class="fab fa-linkedin"></i> /phandrieu
             </a>
         </div>
-        
+        <div class="download-buttons">
+            <a href="Paul-Henri Andrieu.vcf" download="Paul-Henri Andrieu.vcf" class="btn" style="width:4em">vCard</a>
+            <a href="CV Paul-Henri Andrieu.pdf" download="CV Paul-Henri Andrieu.pdf" class="btn" style="width:4em">CV</a>
+        </div>
     </div>
     <script>
         // Calcule la vraie hauteur de la fenêtre sur mobile
@@ -169,3 +194,4 @@
     </script>
 </body>
 </html>
+``` 
